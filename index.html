@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>يوتيوبي</title>
+    <link rel="stylesheet" href="css/bootstrap-rtl.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marhey:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="mt-5 rtl">
+    <div class="layer"></div>
+    <div id="top-menu">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg fixed-top navbar-light bg p-3">
+          <i class="fa-solid fa-bars fa-xl" id="bar-btn"></i>
+          <b>
+            <a class="navbar-brand" href="index.html"
+              >يوتيوبي
+              <span class="logo-icon px-1 pt-1"
+                ><i class="fa-solid fa-circle-play"></i
+              ></span>
+            </a>
+          </b>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item pe-3">
+                <a class="nav-link first-element" href="index.html"
+                  >الفيديوهات المقترحة <span class="sr-only">(current)</span></a
+                >
+              </li>
+              <li class="nav-item ms-0 pe-3">
+                <a class="nav-link" href="#">المضاف حديثا</a>
+              </li>
+              <li class="nav-item ms-0 pe-3">
+                <a class="nav-link" href="#">المحتوي الرائج</a>
+              </li>
+            </ul>
+            <div class="d-flex my-2 my-lg-0">
+              <input
+                class="form-control me-sm-2 ms-2 form-hide"
+                type="search"
+                placeholder="ابحث"
+                aria-label="Search"
+                dir="auto"
+              />
+              <button
+                onclick="location.href='search.html';"
+                class="btn btn-style my-2 my-sm-0 ms-2 form-hide"
+                type="submit"
+              >
+                ابحث
+              </button>
+            </div>
+          </div>
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <a
+            class="nav-link login-btn ms-3"
+            data-bs-toggle="modal"
+            data-bs-target="#login-modal"
+            href="#"
+            >تسجيل الدخول</a
+          >
+        </nav>
+        <input
+          type="search"
+          class="form-control search-input"
+          placeholder="إبحث عن ..."
+        />
+
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="login-modal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">تسجيل الدخول</h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-group">
+                    <label for="email" class="col-form-label"
+                      >البريد الإليكتروني:</label
+                    >
+                    <input type="email" class="form-control" id="email" />
+                  </div>
+                  <div class="form-group">
+                    <label for="password" class="col-form-label"
+                      >كلمة المرور:</label
+                    >
+                    <input type="password" class="form-control" id="password" />
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <a href="#">نسيت كلمة المرور</a>
+                <a href="#" class="mx-auto">إنشاء حساب</a>
+                <button type="button" class="btn modal-login">دخول</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- content of side bar -->
+        <div class="row pt-4">
+          <div id="wrap">
+            <div class="sidebar">
+              <ul class="list-group list-group-flush ps-0">
+                <a
+                  href="index.html"
+                  class="list-group-item list-group-item-action py-3"
+                >
+                  <i class="fa-solid fa-house-chimney bar-icon me-2"></i> الصفحة
+                  الرئيسية
+                </a>
+                <a href="" class="list-group-item list-group-item-action py-3">
+                  <i class="fa-regular fa-circle-dot bar-icon me-2"></i>
+                  الفيديوهات المقترحة
+                </a>
+                <a href="" class="list-group-item list-group-item-action py-3">
+                  <i class="fa-solid fa-circle-plus bar-icon me-2"></i> المرفوعة
+                  حديثاً
+                </a>
+                <a href="" class="list-group-item list-group-item-action py-3">
+                  <i class="fa-solid fa-fire-flame-curved bar-icon me-2"></i>
+                  المحتوي الرائج
+                </a>
+                <a
+                  href="log.html"
+                  class="list-group-item list-group-item-action py-3"
+                >
+                  <i class="fa-solid fa-clock-rotate-left bar-icon me-2"></i>
+                  سجل المشاهدة
+                </a>
+                <a href="" class="list-group-item list-group-item-action py-3">
+                  <i class="fa-solid fa-users bar-icon me-2"></i> الإشتراكات
+                </a>
+                <a href="" class="list-group-item list-group-item-action py-3">
+                  <i class="fa-solid fa-film bar-icon me-2"></i> الأفلام والعروض
+                </a>
+                <a href="" class="list-group-item list-group-item-action py-3">
+                  <i class="fa-solid fa-gamepad bar-icon me-2"></i> العاب
+                  الفيديو
+                </a>
+                <a href="" class="list-group-item list-group-item-action py-3">
+                  <i class="fa-solid fa-shirt bar-icon me-2"></i> الموضة والجمال
+                </a>
+                <a href="" class="list-group-item list-group-item-action py-3">
+                  <i class="fa-solid fa-user-graduate bar-icon me-2"></i>
+                  المحتوي التعليمي
+                </a>
+                <a href="" class="list-group-item list-group-item-action py-3">
+                  <i class="fa-solid fa-user-graduate bar-icon me-2"></i>
+                  اي شئ
+                </a>
+                <a href="" class="list-group-item list-group-item-action py-3">
+                  <i class="fa-solid fa-gear bar-icon me-2"></i> الاعدادات
+                </a>
+                <a href="" class="list-group-item list-group-item-action py-3">
+                  <i class="fa-solid fa-circle-question bar-icon me-2"></i>
+                  المساعدة
+                </a>
+                <a href="" class="list-group-item list-group-item-action py-3">
+                  <i class="fa-solid fa-circle-question bar-icon me-2"></i>
+                  اي شئ
+                </a>
+                <a href="" class="list-group-item list-group-item-action py-3">
+                  كل الحقوق محفوظة اكاديمية حسوب <br />
+                  يحيي أحمد 💗 &copy; 2023
+                </a>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- -------------------- content of page -------------------------- -->
+        <div class="content m-4">
+          <h4 class="py-5">الفيديوهات المقترحة</h4>
+          <div class="row">
+            <!-- card -->
+            <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+              <div class="card mb-4 p-2">
+                <div class="card-icons">
+                  <a href="watch.html">
+                    <img
+                      src="img/thumbnail/restful.jpg"
+                      class="card-img-top"
+                      alt="restful thumbnail"
+                    />
+                    <time>9:20</time>
+                    <i class="fa-solid fa-play fa-2x"></i>
+                  </a>
+                </div>
+                <a href="watch.html">
+                  <div class="card-body p-1">
+                    <p class="card-title">
+                      تعلم كيف تنشئ واجهة مستخدم بواسطة restful بشرح مبسط وجميل
+                    </p>
+                  </div>
+                </a>
+                <div class="card-footer">
+                  <small class="text-muted">
+                    <span class="d-block">
+                      <i class="fa-solid fa-film"></i>
+                      <span>3 آلاف مشاهدة</span>
+                    </span>
+                    <i class="fa-solid fa-clock"></i> <span> منذ 10 دقائق</span>
+                  </small>
+                </div>
+                <a href="channel.html" class="channel-link">
+                  <img
+                    src="img/ch-logo.png"
+                    alt="hsoub logo"
+                    class="rounded-circle my-2 mx-2"
+                    width="35"
+                  />
+                  <span>أكاديمية حسوب</span>
+                </a>
+              </div>
+            </div>
+            <!-- end card -->
+            <!-- card -->
+            <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+              <div class="card mb-4 p-2">
+                <div class="card-icons">
+                  <a href="watch.html">
+                    <img
+                      src="img/thumbnail/app.jpg"
+                      class="card-img-top"
+                      alt="app.jpg"
+                    />
+                    <time>10:43</time>
+                    <i class="fa-solid fa-play fa-2x"></i>
+                  </a>
+                </div>
+                <a href="watch.html">
+                  <div class="card-body p-1">
+                    <p class="card-title">
+                      مراجعة لغات الويب والوصول لدرجة متقدمة
+                    </p>
+                  </div>
+                </a>
+                <div class="card-footer">
+                  <small class="text-muted">
+                    <span class="d-block">
+                      <i class="fa-solid fa-film"></i>
+                      <span>12 الف مشاهدة</span>
+                    </span>
+                    <i class="fa-solid fa-clock"></i> <span> قبل 3 أشهر</span>
+                  </small>
+                </div>
+                <a href="channel.html" class="channel-link">
+                  <img
+                    src="img/avatar.png"
+                    alt="hsoub logo"
+                    class="rounded-circle my-2 mx-2"
+                    width="35"
+                  />
+                  <span>قناة المعرفة والتطور</span>
+                </a>
+              </div>
+            </div>
+            <!-- end card -->
+            <!-- card -->
+            <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+              <div class="card mb-4 p-2">
+                <div class="card-icons">
+                  <a href="watch.html">
+                    <img
+                      src="img/thumbnail/database.jpg"
+                      class="card-img-top"
+                      alt="database.jpg"
+                    />
+                    <time>6:10</time>
+                    <i class="fa-solid fa-play fa-2x"></i>
+                  </a>
+                </div>
+                <a href="watch.html">
+                  <div class="card-body p-1">
+                    <p class="card-title">
+                      شرح الـ DataBase وانواعها بشكل تفصيلي وكيفية التعامل مع كل
+                      نوع
+                    </p>
+                  </div>
+                </a>
+                <div class="card-footer">
+                  <small class="text-muted">
+                    <span class="d-block">
+                      <i class="fa-solid fa-film"></i>
+                      <span>11 الف مشاهدة</span>
+                    </span>
+                    <i class="fa-solid fa-clock"></i> <span> قبل 4 أشهر</span>
+                  </small>
+                </div>
+                <a href="channel.html" class="channel-link">
+                  <img
+                    src="img/mostaql.png"
+                    alt="mostaql.png"
+                    class="rounded-circle my-2 mx-2"
+                    width="35"
+                  />
+                  <span>مستقل</span>
+                </a>
+              </div>
+            </div>
+            <!-- end card -->
+            <!-- card -->
+            <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+              <div class="card mb-4 p-2">
+                <div class="card-icons">
+                  <a href="watch.html">
+                    <img
+                      src="img/thumbnail/khamsat4.png"
+                      class="card-img-top"
+                      alt="khamsat3.png"
+                    />
+                    <time>7:22</time>
+                    <i class="fa-solid fa-play fa-2x"></i>
+                  </a>
+                </div>
+                <a href="watch.html">
+                  <div class="card-body p-1">
+                    <p class="card-title">تعلم كيفية العمل علي منصة خمسات</p>
+                  </div>
+                </a>
+                <div class="card-footer">
+                  <small class="text-muted">
+                    <span class="d-block">
+                      <i class="fa-solid fa-film"></i>
+                      <span>15 الف مشاهدة</span>
+                    </span>
+                    <i class="fa-solid fa-clock"></i> <span> قبل 5 أشهر</span>
+                  </small>
+                </div>
+                <a href="channel.html" class="channel-link">
+                  <img
+                    src="img/khamsat.jpg"
+                    alt="hsoub logo"
+                    class="rounded-circle my-2 mx-2"
+                    width="35"
+                  />
+                  <span>خمسات</span>
+                </a>
+              </div>
+            </div>
+            <!-- end card -->
+            <!-- card -->
+            <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+              <div class="card mb-4 p-2">
+                <div class="card-icons">
+                  <a href="watch.html">
+                    <img
+                      src="img/thumbnail/ruby1.jpg"
+                      class="card-img-top"
+                      alt="ruby1"
+                    />
+                    <time>12:14</time>
+                    <i class="fa-solid fa-play fa-2x"></i>
+                  </a>
+                </div>
+                <a href="watch.html">
+                  <div class="card-body p-1">
+                    <p class="card-title">
+                      تعرف علي اللغات المستخدمة في بناء موقع shopify وموقع
+                      github وخمسات
+                    </p>
+                  </div>
+                </a>
+                <div class="card-footer">
+                  <small class="text-muted">
+                    <span class="d-block">
+                      <i class="fa-solid fa-film"></i>
+                      <span>1 الف مشاهدة</span>
+                    </span>
+                    <i class="fa-solid fa-clock"></i> <span> قبل 2 اسبوع</span>
+                  </small>
+                </div>
+                <a href="channel.html" class="channel-link">
+                  <img
+                    src="img/ch-logo.png"
+                    alt="hsoub logo"
+                    class="rounded-circle my-2 mx-2"
+                    width="35"
+                  />
+                  <span>أكاديمية حسوب</span>
+                </a>
+              </div>
+            </div>
+            <!-- end card -->
+            <!-- card -->
+            <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+              <div class="card mb-4 p-2">
+                <div class="card-icons">
+                  <a href="watch.html">
+                    <img
+                      src="img/thumbnail/mostaql2.png"
+                      class="card-img-top"
+                      alt="mostaql2"
+                    />
+                    <time>3:21</time>
+                    <i class="fa-solid fa-play fa-2x"></i>
+                  </a>
+                </div>
+                <a href="watch.html">
+                  <div class="card-body p-1">
+                    <p class="card-title">
+                      تعرف علي اهم النقاط التي يجب مراعتها لجعل ملفك الشخصي في
+                      المقدمة
+                    </p>
+                  </div>
+                </a>
+                <div class="card-footer">
+                  <small class="text-muted">
+                    <span class="d-block">
+                      <i class="fa-solid fa-film"></i>
+                      <span>16 الف مشاهدة</span>
+                    </span>
+                    <i class="fa-solid fa-clock"></i> <span> قبل 7 أشهر</span>
+                  </small>
+                </div>
+                <a href="channel.html" class="channel-link">
+                  <img
+                    src="img/mostaql.png"
+                    alt="hsoub logo"
+                    class="rounded-circle my-2 mx-2"
+                    width="35"
+                  />
+                  <span>مستقل</span>
+                </a>
+              </div>
+            </div>
+            <!-- end card -->
+            <!-- card -->
+            <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+              <div class="card mb-4 p-2">
+                <div class="card-icons">
+                  <a href="watch.html">
+                    <img
+                      src="img/thumbnail/php.jpg"
+                      class="card-img-top"
+                      alt="php"
+                    />
+                    <time>4:10</time>
+                    <i class="fa-solid fa-play fa-2x"></i>
+                  </a>
+                </div>
+                <a href="watch.html">
+                  <div class="card-body p-1">
+                    <p class="card-title">
+                      تعرف علي لغة php ودورها الفعال في مواقع الويب
+                    </p>
+                  </div>
+                </a>
+                <div class="card-footer">
+                  <small class="text-muted">
+                    <span class="d-block">
+                      <i class="fa-solid fa-film"></i>
+                      <span>9 آلاف مشاهدة</span>
+                    </span>
+                    <i class="fa-solid fa-clock"></i> <span> قبل سنه</span>
+                  </small>
+                </div>
+                <a href="channel.html" class="channel-link">
+                  <img
+                    src="img/ch-logo.png"
+                    alt="hsoub logo"
+                    class="rounded-circle my-2 mx-2"
+                    width="35"
+                  />
+                  <span>أكاديمية حسوب</span>
+                </a>
+              </div>
+            </div>
+            <!-- end card -->
+            <!-- card -->
+            <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+              <div class="card mb-4 p-2">
+                <div class="card-icons">
+                  <a href="watch.html">
+                    <img
+                      src="img/thumbnail/frontend.jpg"
+                      class="card-img-top"
+                      alt="frontend"
+                    />
+                    <time>7:43</time>
+                    <i class="fa-solid fa-play fa-2x"></i>
+                  </a>
+                </div>
+                <a href="watch.html">
+                  <div class="card-body p-1">
+                    <p class="card-title">
+                      تعلم تصميم واجهات المستخدم وطريقك لإحتراف التصميم
+                    </p>
+                  </div>
+                </a>
+                <div class="card-footer">
+                  <small class="text-muted">
+                    <span class="d-block">
+                      <i class="fa-solid fa-film"></i>
+                      <span>60 الف مشاهدة</span>
+                    </span>
+                    <i class="fa-solid fa-clock"></i> <span> قبل سنه</span>
+                  </small>
+                </div>
+                <a href="channel.html" class="channel-link">
+                  <img
+                    src="img/ch-logo.png"
+                    alt="hsoub logo"
+                    class="rounded-circle my-2 mx-2"
+                    width="35"
+                  />
+                  <span>أكاديمية حسوب</span>
+                </a>
+              </div>
+            </div>
+            <!-- end card -->
+            <!-- card -->
+            <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+              <div class="card mb-4 p-2">
+                <div class="card-icons">
+                  <a href="watch.html">
+                    <img
+                      src="img/thumbnail/khamsat2.jpg"
+                      class="card-img-top"
+                      alt="khamsat2"
+                    />
+                    <time>6:12</time>
+                    <i class="fa-solid fa-play fa-2x"></i>
+                  </a>
+                </div>
+                <a href="watch.html">
+                  <div class="card-body p-1">
+                    <p class="card-title">
+                      تعرف علي اهم النقاط والمعلومات الواجب توفرها في ملفك
+                      الشخصي
+                    </p>
+                  </div>
+                </a>
+                <div class="card-footer">
+                  <small class="text-muted">
+                    <span class="d-block">
+                      <i class="fa-solid fa-film"></i>
+                      <span>45 الف مشاهدة</span>
+                    </span>
+                    <i class="fa-solid fa-clock"></i> <span> قبل سنه</span>
+                  </small>
+                </div>
+                <a href="channel.html" class="channel-link">
+                  <img
+                    src="img/khamsat.jpg"
+                    alt="hsoub logo"
+                    class="rounded-circle my-2 mx-2"
+                    width="35"
+                  />
+                  <span>خمسات</span>
+                </a>
+              </div>
+            </div>
+            <!-- end card -->
+            <!-- card -->
+            <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+              <div class="card mb-4 p-2">
+                <div class="card-icons">
+                  <a href="watch.html">
+                    <img
+                      src="img/thumbnail/mostaql1.jpg"
+                      class="card-img-top"
+                      alt="restful thumbnail"
+                    />
+                    <time>11:10</time>
+                    <i class="fa-solid fa-play fa-2x"></i>
+                  </a>
+                </div>
+                <a href="watch.html">
+                  <div class="card-body p-1">
+                    <p class="card-title">
+                      تعرف علي منصة مستقل وكيفية الوصل بينك وبين عميلك بشكل امن
+                      وسهل
+                    </p>
+                  </div>
+                </a>
+                <div class="card-footer">
+                  <small class="text-muted">
+                    <span class="d-block">
+                      <i class="fa-solid fa-film"></i>
+                      <span>80 الف مشاهدة</span>
+                    </span>
+                    <i class="fa-solid fa-clock"></i> <span> قبل سنتين</span>
+                  </small>
+                </div>
+                <a href="channel.html" class="channel-link">
+                  <img
+                    src="img/mostaql.png"
+                    alt="hsoub logo"
+                    class="rounded-circle my-2 mx-2"
+                    width="35"
+                  />
+                  <span>مستقل</span>
+                </a>
+              </div>
+            </div>
+            <!-- end card -->
+            <!-- card -->
+            <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+              <div class="card mb-4 p-2">
+                <div class="card-icons">
+                  <a href="watch.html">
+                    <img
+                      src="img/thumbnail/khamsat3.png"
+                      class="card-img-top"
+                      alt="khamsat3"
+                    />
+                    <time>5:23</time>
+                    <i class="fa-solid fa-play fa-2x"></i>
+                  </a>
+                </div>
+                <a href="watch.html">
+                  <div class="card-body p-1">
+                    <p class="card-title">
+                      شرح كيفية التسجيل في موقع خمسات وتجهيز ملفك الشخصي بشكل
+                      احترافي
+                    </p>
+                  </div>
+                </a>
+                <div class="card-footer">
+                  <small class="text-muted">
+                    <span class="d-block">
+                      <i class="fa-solid fa-film"></i>
+                      <span>100 الف مشاهدة</span>
+                    </span>
+                    <i class="fa-solid fa-clock"></i> <span> قبل سنتين</span>
+                  </small>
+                </div>
+                <a href="channel.html" class="channel-link">
+                  <img
+                    src="img/khamsat.jpg"
+                    alt="hsoub logo"
+                    class="rounded-circle my-2 mx-2"
+                    width="35"
+                  />
+                  <span>خمسات</span>
+                </a>
+              </div>
+            </div>
+            <!-- end card -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ------------------------ scripts files ------------------------- -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

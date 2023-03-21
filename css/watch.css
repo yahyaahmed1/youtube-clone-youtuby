@@ -1,0 +1,64 @@
+.card:hover {
+  transform: translateY(0%);
+}
+.watch-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 34px;
+}
+.watch-icon i:hover {
+  cursor: pointer;
+}
+#more {
+  display: none;
+}
+textarea.form-control:focus {
+  box-shadow: none;
+}
+.card-inner {
+  display: none;
+}
+.card-body .row .btn:hover {
+  background-color: #001f54 !important;
+  color: white;
+}
+time {
+  font-size: 13px;
+  left: 20px !important;
+  bottom: 8px !important;
+}
+.comment-time {
+  font-size: 14px;
+  margin: 10px 0 0;
+}
+.reply-time {
+  font-size: 14px;
+  margin: 10px 0 0;
+}
+.dropdown-menu {
+  right: 0px !important;
+}
+.dropdown-item:hover {
+  background-color: #001f54 !important;
+  color: #a7e3ff !important;
+}
+.comments-num {
+  background-color: #001f54;
+  padding: 2px;
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+  text-align: center;
+  color: #a7e3ff;
+  border-radius: 2px;
+  margin-left: 15px;
+  display: inline-block;
+}
+@media (max-width: 595px) {
+  .comment-time {
+    font-size: 12px;
+  }
+  .reply-time {
+    font-size: 12px;
+  }
+}

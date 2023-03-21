@@ -1,0 +1,37 @@
+.btn {
+  background-color: #001f54 !important;
+  color: white !important;
+}
+.video-section .card {
+  transform: translateY(0%);
+}
+time {
+  font-size: 14px;
+}
+.navbar .navbar-nav .nav-link {
+  padding: auto 5px !important;
+}
+.social-media {
+  bottom: 15px;
+  left: 15px;
+  background-color: darkgray;
+}
+.follow {
+  bottom: 15px;
+  right: 15px;
+}
+.row > .banner {
+  padding: 0 !important;
+}
+@media (max-width: 635px) {
+  .navbar .navbar-nav .nav-link,
+  .btn,
+  .social-media {
+    font-size: 13px;
+  }
+}
+@media (max-width: 766px) {
+  .card-block > p {
+    font-size: 13px;
+  }
+}

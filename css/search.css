@@ -1,0 +1,22 @@
+#search-filter-icon {
+  cursor: pointer;
+}
+.filter-column {
+  display: none;
+}
+input:checked + span {
+  color: #001f54;
+  font-weight: bold;
+}
+@media (max-width: 766px) {
+  .card-body .channel-img {
+    display: inline !important;
+    margin-right: 1.5rem !important;
+  }
+}
+@media (max-width: 479px) {
+  .card-body .channel-img {
+    display: block !important;
+    margin-right: 0 !important;
+  }
+}
